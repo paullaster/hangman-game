@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hangman Game</title>
+        <style>
+            .gameArea {
+                text-align: center;
+                font-size: 2em;
+            }
+            .box,
+            .boxD {
+                display: inline-block;
+                padding: 5px;
+            }
+            .boxE {
+                display: inline-block;
+                width: 40px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gameArea">
+        <div class="score"> </div>
+        <div class="puzzle"></div>
+        <div class="letters"></div>
+        <button>Start Game</button>
+        </div>
+        <script>
+            const puzzlesList = [
+                "javascript",
+                "hangman",
+                "monkey",
+                "amazing",
+                "pancake"
+            ];
+
+            let puzzle = puzzlesList[Math.floor(Math.random() * puzzlesList.length)];
+            let score = 0;
+            let puzzleArray = puzzle.split ('');
+            let inputElement = 0;
+            while (inputElement < puzzleArray.length) {
+                let input = document.createElement ('input');
+                console.log (input);
+                inputElement++;
+            };
+        </script>
+    </body>
+</html>
