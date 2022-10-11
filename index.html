@@ -30,16 +30,102 @@
         </div>
         <script>
             const puzzlesList = [
-                "javascript",
-                "hangman",
-                "monkey",
-                "amazing",
-                "pancake"
+                "united states",
+                "canada",
+                "mexico",
+                "brazil",
+                "argentina",
+                "australia",
+                "new zealand",
+                "china",
+                "japan",
+                "india",
+                "russia",
+                "germany",
+                "france",
+                "italy",
+                "spain",
+                "united kingdom",
+                "south africa",
+                "egypt",
+                "morocco",
+                "nigeria",
+                "kenya",
+                "tanzania",
+                "algeria",
+                "sudan",
+                "ethiopia",
+                "somalia",
+                "uganda",
+                "congo",
+                "angola",
+                "mozambique",
+                "madagascar",
+                "zambia",
+                "zimbabwe",
+                "malawi",
+                "botswana",
+                "namibia",
+                "lesotho",
+                "swaziland",
+                "south sudan",
+                "chad",
+                "cameroon",
+                "niger",
+                "senegal",
+                "ghana",
+                "togo",
+                "benin",
+                "liberia",
+                "sierra leone",
+                "cote d'ivoire",
+                "guinea",
+                "guinea-bissau",
+                "guinea",
+                "cape verde",
+                "mauritania",
+                "mauritius",
+                "seychelles",
+                "comoros",
+                "mayotte",
+                "reunion",
+                "sao tome and principe",
+                "equatorial guinea",
+                "central african republic",
+                "democratic republic of the congo",
+                "south sudan",
+                "burundi",
+                "rwanda",
+                "burkina faso",
+                "gambia",
+                "tunisia",
+                "libya",
+                "albania",
+                "andorra",
+                "armenia",
+                "austria",
+                "azerbaijan",
+                "belarus",
+                "belgium",
+                "bosnia and herzegovina",
+                "bulgaria",
+                "croatia",
+                "cyprus",
+                "czech republic",
+                "denmark",
+                "estonia",
+                "finland",
+                "georgia",
+                "greece",
+                "hungary",
+                "iceland",
+                "ireland",
+                
             ];
 
             let puzzle = puzzlesList[Math.floor(Math.random() * puzzlesList.length)];
             let score = 0;
-            console.log (puzzle);
+            let counter = 0;
             let puzzleArray = puzzle.split ('');
             let inputElement = 0;
             let outputElement = [];
@@ -66,14 +152,18 @@
                 if (puzzleArray.includes (event.target.value)) {
                     let i = puzzleArray.indexOf ( event.target.value);
                     if (outputElement[i].value  === event.target.value && outputElement[i] !== null) {
-                        alert (outputElement[i].value);
+                        outputElement[i].value = event.target.value;
                     }else {
                         outputElement[i].value = event.target.value;
+                        event.target.value = '';
                     };
                 }else {
                     alert (`${event.target.value} is not in the puzzle`);
                     event.target.value = '';
+                    console.log (event)
                 };
+
+
             }
            // console.log (outputElement);
         </script>
