@@ -53,10 +53,10 @@
             function startGame() {
                 let letters = document.querySelector ( '.letters');
                 letters.classList.add ( 'boxE');
-                outputElement.forEach ( (letters, index) => {
-
+                outputElement.forEach ( (box, index) => {
+                    box.classList.add ( 'boxD');
+                    letters.appendChild (box);
                 });
-                outputElement.classList.add ( 'boxD');
             };
            // console.log (outputElement);
         </script>
