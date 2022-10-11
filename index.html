@@ -57,8 +57,24 @@
                 outputElement.forEach ( (box, index) => {
                     box.classList.add ( 'boxE');
                     letters.appendChild (box);
+
+                    box.addEventListener ( 'change', checkInput, this );
                 });
             };
+
+            function checkInput (event ) {
+                if (puzzleArray.includes (event.target.value)) {
+                    let i = puzzleArray.indexOf ( event.target.value);
+                    if (outputElement[i].value  === event.target.value && outputElement[i] !== null) {
+                        alert (outputElement[i].value);
+                    }else {
+                        outputElement[i].value = event.target.value;
+                    };
+                }else {
+                    alert (`${event.target.value} is not in the puzzle`);
+                    event.target.value = '';
+                };
+            }
            // console.log (outputElement);
         </script>
     </body>
