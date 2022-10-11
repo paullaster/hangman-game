@@ -41,11 +41,24 @@
             let score = 0;
             let puzzleArray = puzzle.split ('');
             let inputElement = 0;
+            let outputElement = [];
             while (inputElement < puzzleArray.length) {
                 let input = document.createElement ('input');
-                console.log (input);
+                outputElement.push (input);
                 inputElement++;
             };
+            const start_game_button = document.querySelector ( 'button' );
+            start_game_button.addEventListener( 'click', startGame, this ); 
+
+            function startGame() {
+                let letters = document.querySelector ( '.letters');
+                letters.classList.add ( 'boxE');
+                outputElement.forEach ( (letters, index) => {
+
+                });
+                outputElement.classList.add ( 'boxD');
+            };
+           // console.log (outputElement);
         </script>
     </body>
 </html>
