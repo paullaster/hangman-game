@@ -39,6 +39,7 @@
 
             let puzzle = puzzlesList[Math.floor(Math.random() * puzzlesList.length)];
             let score = 0;
+            console.log (puzzle);
             let puzzleArray = puzzle.split ('');
             let inputElement = 0;
             let outputElement = [];
@@ -52,9 +53,9 @@
 
             function startGame() {
                 let letters = document.querySelector ( '.letters');
-                letters.classList.add ( 'boxE');
+                letters.classList.add ( 'boxD');
                 outputElement.forEach ( (box, index) => {
-                    box.classList.add ( 'boxD');
+                    box.classList.add ( 'boxE');
                     letters.appendChild (box);
                 });
             };
